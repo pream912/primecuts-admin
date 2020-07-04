@@ -26,7 +26,8 @@ export default {
 
     methods: {
         sendMessage(senderId, data) {
-            this.database.push({ sender: senderId, message: data })
+            var msg = this.database.push({ sender: senderId, message: data })
+            msg.remove()
         },
 
         readMessage(data) {
