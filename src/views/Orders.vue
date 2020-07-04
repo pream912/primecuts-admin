@@ -31,8 +31,6 @@ export default {
 
         readMessage(data) {
             var msg = JSON.parse(data.val().message)
-            console.log(msg);
-            
             var sender = data.val().sender
             if (sender != this.yourId) {
                 if (msg.ice != undefined)
