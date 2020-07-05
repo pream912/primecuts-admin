@@ -2,7 +2,7 @@
     <v-container>
         <v-row>
             <v-col cols="6">
-                <video ref="mvdo" autoplay playsinline></video>
+                <video ref="mvdo" autoplay muted playsinline></video>
             </v-col>
             <v-col cols="6">
                 <video ref="fvdo" autoplay playsinline></video>
