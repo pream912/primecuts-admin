@@ -23,7 +23,7 @@
             <!-- <v-btn @click="logout" light color="#5cdb95">Logout</v-btn> -->
         </v-app-bar>
         <v-main>
-            <!-- <v-alert :value="alert.alert" :type="alert.type">{{alert.message}}</v-alert> -->
+            <v-alert :value="alert.alert" :type="alert.type">{{alert.message}}</v-alert>
             <router-view></router-view>
         </v-main>
     </div>
@@ -42,7 +42,8 @@ export default {
             {title: 'Orders', icon: 'mdi-cart', link: '/orders'},
             {title: 'Circles', icon: 'mdi-map-marker-circle', link: '/circles'},
             {title: 'Products', icon: 'mdi-barcode-scan', link: '/products'},
-            {title: 'Live', icon: 'mdi-video', link: '/live'},
+            {title: 'Vendors', icon: 'mdi-account-switch', link: '/vendors'},
+            {title: 'Price list', icon: 'mdi-clipboard-text', link: '/plist'},
         ]
     }),
     // methods: {
@@ -52,10 +53,10 @@ export default {
     //         firebase.database().ref('users/'+roll).update({online: false, last_seen: firebase.database.ServerValue.TIMESTAMP})
     //     }
     // },
-    // computed: {
-    //     alert () {
-    //         return this.$store.getters.loadedAlert
-    //     }
-    // }
+    computed: {
+        alert () {
+            return this.$store.getters.alert
+        }
+    }
 }
 </script>

@@ -4,6 +4,7 @@ import Dashboard from '../views/Dashboard.vue'
 import Orders from '../views/Orders.vue'
 import Circles from '../views/Circles.vue'
 import Products from '../views/Products.vue'
+import Vendors from '../views/Vendors.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,10 @@ Vue.use(VueRouter)
   {
     path: '/products',
     component: Products
+  },
+  {
+    path: '/vendors',
+    component: Vendors
   },
 ]
 

@@ -25,5 +25,7 @@ new Vue({
       appId: "1:270007527015:web:6237acea4e59ade46dd6c2"
     }
     firebase.initializeApp(firebaseConfig)
+    store.dispatch('getProducts')
+    store.dispatch('getVendors')
   }
 }).$mount('#app')
