@@ -23,7 +23,7 @@
             <!-- <v-btn @click="logout" light color="#5cdb95">Logout</v-btn> -->
         </v-app-bar>
         <v-main>
-            <v-alert :value="alert.alert" :type="alert.type">{{alert.message}}</v-alert>
+            <v-alert style="z-index: 9999" :value="alert.alert" :type="alert.type">{{alert.message}}</v-alert>
             <router-view></router-view>
         </v-main>
     </div>

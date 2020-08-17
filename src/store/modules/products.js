@@ -35,7 +35,15 @@ const actions = {
 const getters = {
     loadedProducts(state) {
         return state.products
-    }
+    },
+
+    findProduct (state) {
+        return (productId) => {
+        return state.products.find((product) => {
+            return product.id === productId
+            })
+        }
+    },
 }
 
 export default {

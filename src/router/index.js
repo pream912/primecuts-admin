@@ -5,6 +5,7 @@ import Orders from '../views/Orders.vue'
 import Circles from '../views/Circles.vue'
 import Products from '../views/Products.vue'
 import Vendors from '../views/Vendors.vue'
+import PriceList from '../views/PriceList.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,10 @@ Vue.use(VueRouter)
   {
     path: '/vendors',
     component: Vendors
+  },
+  {
+    path: '/plist',
+    component: PriceList
   },
 ]
 

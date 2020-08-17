@@ -34,7 +34,15 @@ const actions = {
 const getters = {
     loadedVendors(state) {
         return state.vendors
-    }
+    },
+
+    findVendor(state) {
+        return (vendorId) => {
+        return state.vendors.find((vendor) => {
+            return vendor.id === vendorId
+            })
+        }
+    },
 }
 
 export default {
