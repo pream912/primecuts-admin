@@ -36,7 +36,7 @@
 export default {
     name: 'App',
     data: () => ({
-        drawer: true,
+        drawer: false,
         items: [
             {title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/'},
             {title: 'Orders', icon: 'mdi-cart', link: '/orders'},

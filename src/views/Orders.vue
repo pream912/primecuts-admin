@@ -9,6 +9,8 @@
             </v-col>
             <v-col>
                 <v-btn @click="showFriendsFace"> Call</v-btn>
+                <v-btn @click="shareScreen"> Screen</v-btn>
+                <v-btn @click="showMyFace"> switch back</v-btn>
             </v-col>
         </v-row>
     </v-container>
@@ -27,6 +29,7 @@ export default {
     methods: {
         sendMessage(senderId, data) {
             var msg = this.database.push({ sender: senderId, message: data })
+            console.log(msg);
             msg.remove()
         },
 
@@ -49,7 +52,13 @@ export default {
         showMyFace() {
             navigator.mediaDevices.getUserMedia({audio:true, video:true})
             .then(stream => this.$refs.mvdo.srcObject = stream)
-            .then(stream => this.pc.addStream(stream));
+            .then(stream => this.pc.addStream(stream))
+        },
+
+        shareScreen () {
+            navigator.mediaDevices.getDisplayMedia()
+            .then(stream => this.$refs.mvdo.srcObject = stream)
+            .then(stream => this.pc.addStream(stream))
         },
 
         showFriendsFace() {
