@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-navigation-drawer color="#01203f" dark v-model="drawer" app clipped>
+        <!-- <v-navigation-drawer color="#01203f" dark v-model="drawer" app clipped>
             <v-list dense nav>
                 <v-list-item
                 v-for="item in items"
@@ -20,10 +20,8 @@
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Primecuts Admin</v-toolbar-title>
             <div class="flex-grow-1"></div>
-            <!-- <v-btn @click="logout" light color="#5cdb95">Logout</v-btn> -->
-        </v-app-bar>
+        </v-app-bar> -->
         <v-main>
-            <v-alert style="z-index: 9999" :value="alert.alert" :type="alert.type">{{alert.message}}</v-alert>
             <router-view></router-view>
         </v-main>
     </div>

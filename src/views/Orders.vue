@@ -22,7 +22,7 @@ import 'firebase/database'
 export default {
     data: () => ({
         database: firebase.database().ref(),
-        yourId: Math.floor(Math.random()*1000000000),
+        yourId: '1001',
         pc: new RTCPeerConnection({'iceServers': [{'urls': 'turn:68.183.92.240:3478','credential': 'Kumar912','username': 'pream912'}]})
     }),
 
